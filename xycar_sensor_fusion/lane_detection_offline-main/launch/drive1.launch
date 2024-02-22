@@ -1,0 +1,7 @@
+<launch>  
+    <include file="$(find xycar_motor)/launch/xycar_motor.launch"/>
+    <node name="Lane_Keeping_System" pkg="LaneKeepingSystem" type="LaneKeepingSystem_node" output="screen"/>
+    <!-- get parameter from config file path-->
+    <param name="config_path" type="str" value="$(find LaneKeepingSystem)/config/config.yaml"/>
+    <!-- make your launch file to use your project. -->
+</launch>
